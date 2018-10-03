@@ -1,29 +1,29 @@
 import React from 'react';
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
 
-class SearchPage extends React.Component {
-    render() {
-        return (
-            <div className="search-books">
-            <div className="search-books-bar">
-              <Link className="close-search" to='/'>Close</Link>
-              <div className="search-books-input-wrapper">
-               
-                <input type="text" placeholder="Search by title or author"/>
+import Book from './Book';
 
-              </div>
-            </div>
-            <div className="search-books-results">
-              <ol className="books-grid"></ol>
-            </div>
-          </div>
-        );
+
+class Shelf extends React.Component {
+    componentDidMount() {
+        console.log(this);
     }
+  render() {
+    return (
+      <div className="bookshelf">
+        <h2 className="bookshelf-title">{this.props.name}</h2>
+        <div className="bookshelf-books">
+          <ol className="books-grid">
+            {
+              this.props.books.map((book, key) => <Book updateBook={this.props.updateBook} book={book} key={key} />)
+            }
+          </ol>
+        </div>
+      </div>
+    );
+  }
 }
 
-export default SearchPage;
 
 
-
-
-
+export default Shelf;
