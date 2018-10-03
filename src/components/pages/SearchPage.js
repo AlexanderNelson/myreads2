@@ -16,7 +16,7 @@ class SearchPage extends React.Component {
             }
         }
     
-        componentDidMount {
+        componentDidMount() {
             BooksAPI.getAll()
             .then(resp => {
                 console.log(resp);

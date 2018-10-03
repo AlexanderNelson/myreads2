@@ -4,7 +4,7 @@ import * as BooksAPI from '../../BooksAPI'
 
 import Shelf from '../Shelf';
 
-class MainPage extends React.Component {
+class HomePage extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -12,14 +12,14 @@ class MainPage extends React.Component {
         }
     }
 
-    componentDidMount {
+    componentDidMount() {
         BooksAPI.getAll()
         .then(resp => {
             console.log(resp);
             this.setState({ books: resp });
         });
     }
-    updateBook(book, shelf) => {
+    updateBook = (book, shelf) => {
         BooksAPI.update(book, shelf)
         .then(resp => {
               book.shelf = shelf;
@@ -52,4 +52,4 @@ class MainPage extends React.Component {
     }
 }
 
-export default MainPage;
+export default HomePage;
