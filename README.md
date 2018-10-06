@@ -25,11 +25,20 @@ Requirements
 MyReads requires the following to run:
 
   * [React Router][ReactRouter] React Router is a collection of navigational components that compose declaratively with your application. It is already included in this repository.
+  * [Node js][Nodejs] React Router is a collection of navigational components that compose declaratively with your application. It is already included in this repository.
 
 
 Usage
 -----
 MyReads can be used to search for books and organize them:
+
+#### Getting Started
+
+* Install node.js. (install node with the PATH variable)
+* Install the React package using this command: npm install -g create-react-app
+* CD to your project directory in your command prompt/terminal
+* Run command: ```npm start```
+* App will open in browser at: localhost:3000 or other available if prompted otherwise.
 
 
 #### Searching and Organizing Books
@@ -72,5 +81,7 @@ Copyright &copy; 2018, Alexander Nelson
 
 
 [ReactRouter]: https://reacttraining.com/react-router/
+[Nodejs]: https://nodejs.org/en/
+
 [shield-dependencies]: https://img.shields.io/badge/dependencies-up%20to%20date-brightgreen.svg
 [shield-build]: https://img.shields.io/badge/build-passing-brightgreen.svg
