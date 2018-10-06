@@ -1,14 +1,16 @@
 import React from 'react';
 // import { Link } from 'react-router-dom';
-import * as BooksAPI from '../BooksAPI';
+// import * as BooksAPI from '../BooksAPI';
+import Authors from './Authors';
 
 class Book extends React.Component {
     render() {
+        const bookCover = `url("${(this.props.book.imageLinks && this.props.book.imageLinks.thumbnail) || ""}")`;
         return (
             <li>
                 <div className="book">
                 <div className="book-top">
-                    <div className="book-cover" style={{ width: 128, height: 192, backgroundImage: `url("${this.props.book.imageLinks && this.props.book.imageLinks.thumbnail || ""}")`}}></div>
+                    <div className="book-cover" style={{ width: 128, height: 192, backgroundImage: bookCover}}></div>
                     <div className="book-shelf-changer">
                     <select value={this.props.book.shelf || "none"} onChange={(e) => {this.props.updateBook(this.props.book, e.target.value) }}>
                         <option value="move" disabled>Move to...</option>
@@ -20,7 +22,7 @@ class Book extends React.Component {
                     </div>
                 </div>
                 <div className="book-title">{this.props.book.title}</div>
-                <div className="book-authors">{this.props.book.authors && this.props.book.authors[0] || "No Author..."}</div>
+                <Authors authors={this.props.book.authors} />
                 </div>
             </li>
         );

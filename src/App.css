@@ -135,11 +135,39 @@ body, .app {
   font-size: 0.8em;
 }
 .book-title {
-  margin-top: 10px;
+  margin: 10px 0;
 }
 .book-authors {
   color: #999;
 }
+
+.book-authors.empty {
+  display: none;
+}
+
+.book-authors ul {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  padding-inline-start: 0;
+}
+
+.book-authors ul li {
+  margin: 0;
+  padding: 0;
+}
+
+/* .book-authors li + li:after {
+  content: " & ";
+} */
+
+/* .book-authors li:before {
+  content: "- ";
+}
+
+.book-authors li:last-of-type:after {
+ content: "";
+} */
 
 .book-top {
   position: relative;
