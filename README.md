@@ -35,7 +35,7 @@ MyReads can be used to search for books and organize them:
 #### Getting Started
 
 * Install node.js. (install node with the PATH variable)
-* Install the React package using this command: npm install -g create-react-app
+* Install the React package using this command: ```npm install -g create-react-app```
 * CD to your project directory in your command prompt/terminal
 * Run command: ```npm start```
 * App will open in browser at: localhost:3000 or other available if prompted otherwise.
